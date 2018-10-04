@@ -1,0 +1,231 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://levels/level.gd" type="Script" id=1]
+[ext_resource path="res://tuts/antig.png" type="Texture" id=2]
+[ext_resource path="res://tuts/spikes.png" type="Texture" id=3]
+[ext_resource path="res://tuts/focus.png" type="Texture" id=4]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://parts/antig/antig_a.tscn" type="PackedScene" id=6]
+[ext_resource path="res://spike.tscn" type="PackedScene" id=7]
+[ext_resource path="res://block.tscn" type="PackedScene" id=8]
+[ext_resource path="res://parts/key/key_a.tscn" type="PackedScene" id=9]
+[ext_resource path="res://parts/jumper/jumper_a.tscn" type="PackedScene" id=10]
+[ext_resource path="res://exit_zone.tscn" type="PackedScene" id=11]
+[ext_resource path="res://levels/level_03.tscn" type="PackedScene" id=12]
+
+[node name="level" type="Node"]
+
+script = ExtResource( 1 )
+
+[node name="tuts" type="Node" parent="." index="0"]
+
+[node name="antig-t" type="Sprite" parent="tuts" index="0"]
+
+position = Vector2( 150, 470 )
+texture = ExtResource( 2 )
+
+[node name="spikess" type="Sprite" parent="tuts" index="1"]
+
+position = Vector2( 2600, -20 )
+texture = ExtResource( 3 )
+
+[node name="focus" type="Sprite" parent="tuts" index="2"]
+
+position = Vector2( 2075, 600 )
+texture = ExtResource( 4 )
+
+[node name="player" parent="." index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 175, 620 )
+
+[node name="antig_a" parent="." index="2" instance=ExtResource( 6 )]
+
+position = Vector2( 350, 650 )
+
+[node name="spikes" type="Node" parent="." index="3"]
+
+editor/display_folded = true
+
+[node name="spike_01" parent="spikes" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( 2425, 205 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="spike_02" parent="spikes" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 2525, 205 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="spike_03" parent="spikes" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 2625, 205 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="spike_04" parent="spikes" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( 2725, 205 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="spike_05" parent="spikes" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( 2825, 205 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="spike_06" parent="spikes" index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 2925, 205 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="spike_07" parent="spikes" index="6" instance=ExtResource( 7 )]
+
+position = Vector2( 2600, 510.639 )
+rotation = 3.14159
+_sections_unfolded = [ "Transform" ]
+
+[node name="side_walls" type="Node" parent="." index="4"]
+
+editor/display_folded = true
+
+[node name="side_wall_left" parent="side_walls" index="0" instance=ExtResource( 8 )]
+
+position = Vector2( -250, 175 )
+scale = Vector2( 5, 20 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="side_wall_right" parent="side_walls" index="1" instance=ExtResource( 8 )]
+
+position = Vector2( 4500, 150 )
+scale = Vector2( 10, 20 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ground" parent="side_walls" index="2" instance=ExtResource( 8 )]
+
+position = Vector2( 2475, 925 )
+scale = Vector2( 50, 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="roof_01" parent="side_walls" index="3" instance=ExtResource( 8 )]
+
+position = Vector2( 800, 175 )
+scale = Vector2( 16, 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="roof_02" parent="side_walls" index="4" instance=ExtResource( 8 )]
+
+position = Vector2( 2400, 275 )
+scale = Vector2( 12, 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="roof_03" parent="side_walls" index="5" instance=ExtResource( 8 )]
+
+position = Vector2( 2500, -550 )
+scale = Vector2( 50, 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="walls" type="Node" parent="." index="5"]
+
+editor/display_folded = true
+
+[node name="wall_01" parent="walls" index="0" instance=ExtResource( 8 )]
+
+editor/display_folded = false
+position = Vector2( 500, 575 )
+scale = Vector2( 1, 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="wall_02" parent="walls" index="1" instance=ExtResource( 8 )]
+
+editor/display_folded = false
+position = Vector2( 1132, 639 )
+scale = Vector2( 1, 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="wall_03" parent="walls" index="2" instance=ExtResource( 8 )]
+
+editor/display_folded = false
+position = Vector2( 1232, 664 )
+scale = Vector2( 1, 1.5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="wall_04" parent="walls" index="3" instance=ExtResource( 8 )]
+
+editor/display_folded = false
+position = Vector2( 1325, 675 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="wall_05" parent="walls" index="4" instance=ExtResource( 8 )]
+
+editor/display_folded = false
+position = Vector2( 725, -200 )
+scale = Vector2( 20, 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="wall_06" parent="walls" index="5" instance=ExtResource( 8 )]
+
+editor/display_folded = false
+position = Vector2( 2050, 150 )
+scale = Vector2( 1, 1.5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="wall_07" parent="walls" index="6" instance=ExtResource( 8 )]
+
+editor/display_folded = false
+position = Vector2( 2325, 125 )
+scale = Vector2( 1, 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="wall_08" parent="walls" index="7" instance=ExtResource( 8 )]
+
+editor/display_folded = false
+position = Vector2( 2950, 125 )
+scale = Vector2( 1, 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="wall_09" parent="walls" index="8" instance=ExtResource( 8 )]
+
+editor/display_folded = false
+position = Vector2( 3175, -175 )
+scale = Vector2( 1, 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="wall_10" parent="walls" index="9" instance=ExtResource( 8 )]
+
+editor/display_folded = false
+position = Vector2( 3175, 639 )
+scale = Vector2( 1, 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="wall_11" parent="walls" index="10" instance=ExtResource( 8 )]
+
+editor/display_folded = false
+position = Vector2( 2600, 400 )
+scale = Vector2( 1, 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="key" parent="." index="6" instance=ExtResource( 9 )]
+
+position = Vector2( 675, 650 )
+
+[node name="jumper" parent="." index="7" instance=ExtResource( 10 )]
+
+position = Vector2( 1900, 645 )
+
+[node name="jumper2" parent="." index="8" instance=ExtResource( 10 )]
+
+position = Vector2( 2075, 645 )
+
+[node name="jumper3" parent="." index="9" instance=ExtResource( 10 )]
+
+position = Vector2( 2250, 645 )
+
+[node name="jumper4" parent="." index="10" instance=ExtResource( 10 )]
+
+position = Vector2( 1900, 200 )
+
+[node name="exit_zone" parent="." index="11" instance=ExtResource( 11 )]
+
+position = Vector2( 3625, 625 )
+scale = Vector2( 6, 1 )
+next_level = ExtResource( 12 )
+
+

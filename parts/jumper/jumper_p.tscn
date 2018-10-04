@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://parts/part.gd" type="Script" id=1]
+
+[node name="jumper" type="Node2D" groups=[
+"parts",
+]]
+
+script = ExtResource( 1 )
+part = "res://parts/jumper/jumper_a.tscn"
+type = "JUMPER"
+
+[node name="Polygon2D" type="Polygon2D" parent="." index="0"]
+
+polygon = PoolVector2Array( 50, 20, 40, 10, 50, 0, 50, -10, 50, -20, -50, -20, -50, -10, -50, 0, -40, 10, -50, 20 )
+uv = PoolVector2Array(  )
+color = Color( 0.469482, 0.359375, 1, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+

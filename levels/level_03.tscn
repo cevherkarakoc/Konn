@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://block.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tuts/thanks.png" type="Texture" id=3]
+
+[node name="level_03" type="Node"]
+
+[node name="block" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 200, 650 )
+scale = Vector2( 5, 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="player" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 200, 450 )
+
+[node name="Sprite" type="Sprite" parent="." index="2"]
+
+position = Vector2( 200, 275 )
+texture = ExtResource( 3 )
+
+
